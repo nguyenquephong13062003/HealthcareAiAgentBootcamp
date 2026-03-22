@@ -1,7 +1,7 @@
 import json
 import os
 import hashlib
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, Any, Optional, List
 from .config import PATIENT_MEMORY_PATH, STORAGE_DIR
 
@@ -36,6 +36,34 @@ def get_patient_history(patient_id: str) -> Optional[Dict[str, Any]]:
     return memory.get(patient_id)
 
 
+def _parse_timestamp(ts: str) -> Optional[datetime]:
+    try:
+        return datetime.fromisoformat(ts.replace("Z", "+00:00"))
+    except Exception:
+        return None
+
+
+def _is_same_recent_visit(
+    last_entry: Dict[str, Any],
+    new_symptoms: str,
+    window_minutes: int = 5,
+) -> bool:
+    last_symptoms = str(last_entry.get("symptoms", "")).strip().lower()
+    current_symptoms = str(new_symptoms).strip().lower()
+
+    if last_symptoms != current_symptoms:
+        return False
+
+    last_timestamp = _parse_timestamp(last_entry.get("timestamp", ""))
+    if last_timestamp is None:
+        return False
+
+    now = datetime.now(timezone.utc)
+    delta_minutes = (now - last_timestamp).total_seconds() / 60.0
+
+    return delta_minutes <= window_minutes
+
+
 def update_patient_memory(
     patient_id: str,
     demographics: Dict[str, Any],
@@ -52,13 +80,27 @@ def update_patient_memory(
             "history": [],
         }
 
-    entry = {
-        "timestamp": datetime.utcnow().isoformat() + "Z",
+    memory[patient_id]["demographics"] = demographics
+
+    new_entry = {
+        "timestamp": datetime.now(timezone.utc)
+        .isoformat()
+        .replace("+00:00", "Z"),
         "symptoms": symptoms,
         "diagnosis": diagnosis_result,
         "insurance_price": insurance_price,
         "doctors": doctors,
     }
 
-    memory[patient_id]["history"].append(entry)
+    history = memory[patient_id]["history"]
+
+    if history:
+        last_entry = history[-1]
+
+        if _is_same_recent_visit(last_entry, symptoms, window_minutes=5):
+            history[-1] = new_entry
+            save_memory(memory)
+            return
+
+    history.append(new_entry)
     save_memory(memory)
