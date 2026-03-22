@@ -6,3 +6,6 @@ scikit-learn
 gradio
 folium
 openai
+transformers
+sentencepiece
+accelerate
