@@ -1,3 +1,4 @@
+# Session 1
 sentence-transformers
 faiss-cpu
 pandas
@@ -6,6 +7,7 @@ scikit-learn
 gradio
 folium
 openai
+# Session 2
 transformers
 sentencepiece
 accelerate
