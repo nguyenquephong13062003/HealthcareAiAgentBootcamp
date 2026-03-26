@@ -1,0 +1,201 @@
+{
+  "4d12c50169ed59ca": {
+    "demographics": {
+      "name": "Nguyen Phong",
+      "email": "123@gmail.com",
+      "age": 30,
+      "sex": "male",
+      "height_cm": 180,
+      "weight_kg": 70,
+      "bmi": 21.6,
+      "children": 1,
+      "smoker": "no",
+      "region": "northwest",
+      "city": "Ho Chi Minh City"
+    },
+    "history": [
+      {
+        "timestamp": "2026-03-26T16:45:08.648889Z",
+        "symptoms": "chest pain",
+        "diagnosis": {
+          "top_diagnosis": {
+            "id": 1,
+            "symptom_pattern": "chest pain, shortness of breath, sweating",
+            "diagnosis": "Possible angina or heart-related issue",
+            "specialty": "Cardiology",
+            "triage_level": "emergency",
+            "red_flags": "Severe chest pain, radiating to arm/jaw, sweating, nausea, or shortness of breath",
+            "recommended_tests": "ECG, troponin blood test, chest X-ray",
+            "advice": "Seek emergency care immediately. Do not ignore or self-medicate.",
+            "icd_code": "I20",
+            "distance": 0.6122239828109741,
+            "confidence": 0.6202611923217773
+          },
+          "matches": [
+            {
+              "id": 1,
+              "symptom_pattern": "chest pain, shortness of breath, sweating",
+              "diagnosis": "Possible angina or heart-related issue",
+              "specialty": "Cardiology",
+              "triage_level": "emergency",
+              "red_flags": "Severe chest pain, radiating to arm/jaw, sweating, nausea, or shortness of breath",
+              "recommended_tests": "ECG, troponin blood test, chest X-ray",
+              "advice": "Seek emergency care immediately. Do not ignore or self-medicate.",
+              "icd_code": "I20",
+              "distance": 0.6122239828109741,
+              "confidence": 0.6202611923217773
+            },
+            {
+              "id": 4,
+              "symptom_pattern": "lower back pain after lifting, no leg weakness or numbness",
+              "diagnosis": "Mechanical low back pain",
+              "specialty": "Orthopedics",
+              "triage_level": "non-urgent",
+              "red_flags": "Weakness, numbness, loss of bladder or bowel control",
+              "recommended_tests": "Physical exam, X-ray if persistent, MRI if neurological signs",
+              "advice": "Rest, posture correction, and medical review if pain persists.",
+              "icd_code": "M54",
+              "distance": 1.220627784729004,
+              "confidence": 0.45032310485839844
+            },
+            {
+              "id": 2,
+              "symptom_pattern": "fever, cough, sore throat, body ache",
+              "diagnosis": "Upper respiratory infection(e.g., flu)",
+              "specialty": "Internal Medicine",
+              "triage_level": "non-urgent",
+              "red_flags": "Persistent high fever >3 days, difficulty breathing, confusion, chest pain",
+              "recommended_tests": "Rapid flu test, CBC, chest X-ray if breathing issues",
+              "advice": "Hydration, rest, and fever control. See a doctor if symptoms worsen.",
+              "icd_code": "J11",
+              "distance": 1.2231708765029907,
+              "confidence": 0.4498080015182495
+            },
+            {
+              "id": 3,
+              "symptom_pattern": "frequent urination, extreme thirst, unexplained weight loss",
+              "diagnosis": "Possible diabetes mellitus",
+              "specialty": "Endocrinology",
+              "triage_level": "urgent",
+              "red_flags": "Blurred vision, confusion, fruity breath smell, very high blood sugar",
+              "recommended_tests": "Fasting blood sugar, HbA1c, urine ketones",
+              "advice": "Schedule a prompt appointment with an endocrinologist.",
+              "icd_code": "E11",
+              "distance": 1.6314116716384888,
+              "confidence": 0.38002416491508484
+            }
+          ],
+          "history_summary": "",
+          "safety_disclaimer": "This system is for informational purposes only and does not provide a medical diagnosis. Always consult a licensed healthcare professional.",
+          "calculated_bmi": 24.22
+        },
+        "insurance_price": 12055.107966666676,
+        "doctors": [
+          {
+            "name": "Dr. Park Jihoon",
+            "specialty": "Cardiology",
+            "city": "Seoul",
+            "rating": 4.7,
+            "latitude": 37.5665,
+            "longitude": 126.978
+          }
+        ]
+      },
+      {
+        "timestamp": "2026-03-26T16:47:42.806891Z",
+        "symptoms": "sore throat",
+        "diagnosis": {
+          "top_diagnosis": {
+            "id": 2,
+            "symptom_pattern": "fever, cough, sore throat, body ache",
+            "diagnosis": "Upper respiratory infection(e.g., flu)",
+            "specialty": "Internal Medicine",
+            "triage_level": "non-urgent",
+            "red_flags": "Persistent high fever >3 days, difficulty breathing, confusion, chest pain",
+            "recommended_tests": "Rapid flu test, CBC, chest X-ray if breathing issues",
+            "advice": "Hydration, rest, and fever control. See a doctor if symptoms worsen.",
+            "icd_code": "J11",
+            "distance": 0.8025879859924316,
+            "confidence": 0.5547579526901245
+          },
+          "matches": [
+            {
+              "id": 2,
+              "symptom_pattern": "fever, cough, sore throat, body ache",
+              "diagnosis": "Upper respiratory infection(e.g., flu)",
+              "specialty": "Internal Medicine",
+              "triage_level": "non-urgent",
+              "red_flags": "Persistent high fever >3 days, difficulty breathing, confusion, chest pain",
+              "recommended_tests": "Rapid flu test, CBC, chest X-ray if breathing issues",
+              "advice": "Hydration, rest, and fever control. See a doctor if symptoms worsen.",
+              "icd_code": "J11",
+              "distance": 0.8025879859924316,
+              "confidence": 0.5547579526901245
+            },
+            {
+              "id": 1,
+              "symptom_pattern": "chest pain, shortness of breath, sweating",
+              "diagnosis": "Possible angina or heart-related issue",
+              "specialty": "Cardiology",
+              "triage_level": "emergency",
+              "red_flags": "Severe chest pain, radiating to arm/jaw, sweating, nausea, or shortness of breath",
+              "recommended_tests": "ECG, troponin blood test, chest X-ray",
+              "advice": "Seek emergency care immediately. Do not ignore or self-medicate.",
+              "icd_code": "I20",
+              "distance": 1.4144970178604126,
+              "confidence": 0.4141649603843689
+            },
+            {
+              "id": 4,
+              "symptom_pattern": "lower back pain after lifting, no leg weakness or numbness",
+              "diagnosis": "Mechanical low back pain",
+              "specialty": "Orthopedics",
+              "triage_level": "non-urgent",
+              "red_flags": "Weakness, numbness, loss of bladder or bowel control",
+              "recommended_tests": "Physical exam, X-ray if persistent, MRI if neurological signs",
+              "advice": "Rest, posture correction, and medical review if pain persists.",
+              "icd_code": "M54",
+              "distance": 1.5395190715789795,
+              "confidence": 0.3937753438949585
+            },
+            {
+              "id": 3,
+              "symptom_pattern": "frequent urination, extreme thirst, unexplained weight loss",
+              "diagnosis": "Possible diabetes mellitus",
+              "specialty": "Endocrinology",
+              "triage_level": "urgent",
+              "red_flags": "Blurred vision, confusion, fruity breath smell, very high blood sugar",
+              "recommended_tests": "Fasting blood sugar, HbA1c, urine ketones",
+              "advice": "Schedule a prompt appointment with an endocrinologist.",
+              "icd_code": "E11",
+              "distance": 1.6683542728424072,
+              "confidence": 0.3747628331184387
+            }
+          ],
+          "history_summary": "This patient has 1 previous recorded visit(s).",
+          "safety_disclaimer": "This system is for informational purposes only and does not provide a medical diagnosis. Always consult a licensed healthcare professional.",
+          "calculated_bmi": 21.6
+        },
+        "insurance_price": 13238.250300000027,
+        "doctors": [
+          {
+            "name": "Dr. Kim Hana",
+            "specialty": "Internal Medicine",
+            "city": "Seoul",
+            "rating": 4.6,
+            "latitude": 37.5665,
+            "longitude": 126.9785
+          },
+          {
+            "name": "Dr. Nguyen An",
+            "specialty": "Internal Medicine",
+            "city": "Hanoi",
+            "rating": 4.6,
+            "latitude": 21.0278,
+            "longitude": 105.8342
+          }
+        ]
+      }
+    ]
+  }
+}
